@@ -1,0 +1,907 @@
+@font-face {
+    font-family: "Euclid Circular B";
+    src: url("../fonts/Euclid\ Circular\ B\ Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Euclid Circular B";
+    src: url("../fonts/Euclid\ Circular\ B\ Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Euclid Circular B";
+    src: url("../fonts/Euclid\ Circular\ B\ Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Euclid Circular B";
+    src: url("../fonts/Euclid\ Circular\ B\ SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Euclid Circular B";
+    src: url("../fonts/Euclid\ Circular\ B\ Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Aeonik";
+    src: url("../fonts/Aeonik-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Gilroy";
+    src: url("../fonts/Gilroy-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+:root {
+    /*========== Colors ==========*/
+    /* Primary Theme Color Set */
+    --first-color: #ff592c;
+    /* Ana buton rengi */
+    --first-color-second: #ff9500;
+    /* Vurgu, popüler badge */
+    --first-color-alt: #005aa1;
+    /* Alternatif badge (mavi) */
+    --first-color-lighter: #34c759;
+    /* Alternatif badge (yeşil) */
+
+    /* Typography Colors */
+    --title-color: #353945;
+    /* Sayfa başlıkları */
+    --text-color: #787da7;
+    /* Sayfanın genel yazı rengi */
+    --text-color-light: #b0b0b0;
+    /* Silik metinler */
+    --text-color-hero: #ffffff;
+    /* Hero içindeki yazı rengi */
+    --input-color: #808894;
+    /* Placeholder yazı */
+
+    /* Layout Backgrounds */
+    --body-color: #f8f9fb;
+    /* Sayfa genel arka planı */
+    --navbar-bg-color: #ffffff;
+    /* Navbar arka plan */
+    --hero-gradient-top: #5d6169;
+    /* Hero gradient üst */
+    --hero-gradient-bottom: #171a1f;
+    /* Hero gradient alt */
+    --hero-bottom-color: #eceef2;
+    /* Hero altı şerit */
+    --pricing-card-bg: #ffffff;
+    /* Fiyatlandırma kartı arka planı */
+    --pricing-card-bg-alt: #fcfcfd;
+    /* Fiyatlandırma kartı alternatif arka planı */
+
+    /* Borders */
+    --nav-border-color: #717781;
+    /* Navbar */
+    --selected-card-border-color: #ff9500;
+    /* Seçili kart border rengi */
+
+    /*========== Font and typography ==========*/
+    --body-font: "Euclid Circular B", sans-serif;
+
+    --big-font-size: 46px;
+    --h1-font-size: 36px;
+    --h2-font-size: 20px;
+    --h3-font-size: 18px;
+    --normal-font-size: 16px;
+    --small-font-size: 14px;
+    --smaller-font-size: 12px;
+
+    /*========== Font weight ==========*/
+    --font-light: 300;
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    --font-bold: 700;
+}
+
+/*==================== GENERAL ====================*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* BADGES */
+
+.badge-blue {
+    background-color: #005AA1;
+}
+
+.badge-green {
+    background-color: #34C759;
+}
+
+.badge-orange {
+    background-color: var(--first-color-second);
+}
+
+/*==================== HERO ====================*/
+
+.hero {
+    color: var(--text-color-hero);
+}
+
+.hero-top-bg {
+    background: linear-gradient(to left,
+            var(--hero-gradient-top) 0%,
+            var(--hero-gradient-bottom) 100%);
+    height: 608px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* HEADER */
+
+header {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 20px 0px 0px 0px !important;
+    margin-bottom: 0px !important;
+}
+
+header .logo {
+    gap: 10px;
+}
+
+header p {
+    font-size: var(--small-font-size);
+    color: #9599A9;
+    font-family: "Gilroy", sans-serif;
+    margin-bottom: 0px;
+}
+
+header .navigation {
+    font-family: "Aeonik", sans-serif;
+    font-size: var(--normal-font-size);
+    color: var(--text-color-hero);
+    font-weight: var(--font-medium);
+    gap: 43px;
+}
+
+.navigation .dropdown-menu {
+    display: none;
+}
+
+.navigation .dropdown:hover .dropdown-menu {
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    background-color: #f5f5f5;
+}
+
+.navigation .badge {
+    width: fit-content;
+    margin-bottom: 4px !important;
+    font-size: var(--smaller-font-size);
+    font-weight: var(--font-regular);
+}
+
+.navigation a:hover,
+.navigation a img {
+    color: var(--first-color);
+    transition: all 0.3s ease;
+}
+
+/* ACTION BUTTONS */
+.action-buttons {
+    gap: 8px;
+}
+
+.action-buttons button {
+    border: 1px solid var(--nav-border-color);
+    color: var(--text-color-hero);
+    font-size: var(--smaller-font-size);
+    font-weight: var(--font-regular);
+    height: 35px;
+    padding: 4px 4px;
+    transition: all 0.3s ease;
+}
+
+.action-buttons button:hover {
+    border: 1px solid var(--first-color);
+}
+
+.login-button {
+    color: var(--text-color-hero);
+    background-color: var(--first-color);
+    font-size: var(--smaller-font-size);
+    font-weight: var(--font-regular);
+    height: 35px;
+    padding: 5px;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: var(--first-color);
+    box-shadow: 0 5px 15px rgba(255, 89, 44, 0.4);
+}
+
+.login-button:active {
+    background-color: #e04415 !important;
+}
+
+.action-buttons button.rounded-circle {
+    width: 35px !important;
+    padding: 0;
+}
+
+.action-buttons button div {
+    padding: 5px 6px;
+}
+
+.button-dropdown img.arrow-down {
+    background-color: #646870;
+    border-radius: 100%;
+    padding: 2px;
+    transition: transform 0.3s ease;
+}
+
+.action-buttons .dropdown-item:focus {
+    color: var(--first-color);
+}
+
+.login-button-arrow {
+    transform: rotate(-90deg);
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 100%;
+    padding: 2px;
+    transition: transform 0.3s ease;
+}
+
+/* SIDENAV TOGGLER */
+.sidenav-toggler {
+    border: 1px solid var(--nav-border-color);
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.sidenav-toggler:hover {
+    border: 1px solid var(--first-color);
+    transform: scale(1.05);
+}
+
+.sidenav-toggler:focus {
+    box-shadow: none;
+    transition: all 0.3s ease;
+}
+
+.sidenav-toggler img {
+    filter: brightness(0) invert(1);
+    transition: transform 0.3s ease;
+}
+
+.sidenav-toggler:hover img {
+    transform: rotate(10deg);
+}
+
+/* HERO CONTENT */
+
+.hero-content {
+    padding: 42px 0px !important;
+}
+
+.hero-content .container {
+    max-width: 1196px;
+    padding: 0px !important;
+}
+
+.hero-text {
+    width: 708px;
+    padding-top: 39px;
+}
+
+.hero-text-subtitle-container {
+    gap: 12px;
+}
+
+.hero-text-subtitle-container h3 {
+    font-weight: var(--font-regular);
+    font-size: var(--normal-font-size);
+    color: var(--pricing-card-bg-alt);
+    margin-bottom: 0px;
+}
+
+.hero-text-title {
+    font-weight: var(--font-bold);
+    font-size: var(--big-font-size);
+    line-height: 119%;
+    margin-top: 18px;
+    margin-bottom: 12px;
+}
+
+.hero-text-title span {
+    color: var(--first-color);
+}
+
+.hero-text-description {
+    font-weight: var(--font-regular);
+    font-size: var(--normal-font-size);
+    color: var(--pricing-card-bg-alt);
+    line-height: 150%;
+    margin-bottom: 24px;
+}
+
+.hero-text button {
+    color: var(--text-color-hero);
+    background-color: var(--first-color);
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+    padding: 16px;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.hero-text button:hover {
+    background-color: var(--first-color);
+    box-shadow: 0 5px 15px rgba(255, 89, 44, 0.4);
+}
+
+.hero-text button:active {
+    background-color: #e04415 !important;
+}
+
+.hero-text button div {
+    gap: 41px;
+}
+
+.server-person-img {
+    position: relative;
+    z-index: 1 !important;
+    max-width: 100%;
+    height: auto;
+}
+
+.hero-content .bg-logo {
+    position: absolute;
+    top: -15px;
+    left: -114px;
+    width: 609px;
+    height: 453px;
+    z-index: 0;
+}
+
+.discounted-pricing-card-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.discounted-pricing-card {
+    position: absolute;
+    z-index: 10;
+    scale: 0.64;
+}
+
+.discounted-pricing-card-container .discounted-pricing-card:nth-child(1) {
+    top: 114px;
+    transform: translateX(-60%);
+}
+
+.discounted-pricing-card-container .discounted-pricing-card:nth-child(2) {
+    top: 40%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+}
+
+.discounted-pricing-card .badge {
+    background-color: rgba(255, 89, 44, 0.05);
+    color: var(--first-color-lighter);
+    font-size: var(--smaller-font-size);
+    font-weight: var(--font-light);
+    border-radius: 6px;
+    margin-bottom: 0px;
+    align-items: center;
+}
+
+
+/* HERO PRICING */
+
+.hero-pricing {
+    background-color: var(--hero-bottom-color);
+    height: 128px;
+    position: relative;
+}
+
+.hero-pricing p,
+.hero-pricing h3,
+.hero-pricing h4 {
+    margin-bottom: 0px;
+}
+
+.pricing-card-content h4 {
+    font-weight: var(--font-medium);
+    font-size: var(--normal-font-size);
+    color: var(--title-color);
+}
+
+.pricing-card-content p {
+    font-weight: var(--font-light);
+    font-size: var(--small-font-size);
+    color: var(--text-color-light);
+    margin-right: 12px;
+}
+
+.hero-pricing .container {
+    max-width: 1236px;
+    padding: 20px !important;
+    display: flex;
+    background-color: var(--pricing-card-bg-alt);
+    z-index: 5 !important;
+    border-radius: 16px;
+    box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.08);
+    gap: 16px;
+}
+
+.pricing-card {
+    padding: 16px;
+    width: 100%;
+    background-color: var(--pricing-card-bg);
+    border-radius: 12px;
+    color: var(--title-color);
+    box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.08);
+    position: relative;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-card hr {
+    width: 0.74;
+    border: 1px solid #E6E8EC;
+    margin: 12px 0px;
+}
+
+.price-old {
+    font-size: var(--small-font-size);
+    font-weight: var(--font-light);
+    color: var(--text-color-light);
+    text-decoration: line-through;
+    margin-bottom: 0px;
+}
+
+.price-old span {
+    font-weight: var(--font-medium);
+    margin-bottom: 0px;
+}
+
+.price-new {
+    font-weight: var(--font-semi-bold);
+    font-size: var(--h2-font-size);
+    margin-bottom: 0px;
+}
+
+.price-new span {
+    font-weight: var(--font-regular);
+    font-size: var(--small-font-size);
+    margin-bottom: 0px;
+}
+
+.hero-pricing .popular-badge {
+    border: 1px solid var(--first-color);
+}
+
+.hero-pricing .badge {
+    font-size: var(--smaller-font-size);
+    font-weight: var(--font-regular);
+    padding: 6px 12px;
+}
+
+/*==================== SERVER PACKAGES ====================*/
+
+.server-packages .container {
+    max-width: 1236px;
+    margin-top: 70px;
+}
+
+.server-package-card {
+    background-color: var(--pricing-card-bg);
+    border-radius: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.server-package-card-text {
+    width: 301px;
+    height: 100%;
+    padding: 26px 0px 26px 24px;
+}
+
+.server-package-card-text h4 {
+    font-weight: var(--font-medium);
+    font-size: var(--normal-font-size);
+    color: var(--title-color);
+    margin-bottom: 0px;
+}
+
+.server-package-card-text p {
+    font-weight: var(--font-regular);
+    font-size: var(--smaller-font-size);
+    color: var(--text-color-light);
+    margin-bottom: 0px;
+}
+
+.server-package-card button {
+    color: var(--text-color-hero) !important;
+    background-color: var(--first-color);
+    font-size: var(--small-font-size);
+    font-weight: var(--font-medium);
+    padding: 10px 16px;
+    border: none;
+    transition: all 0.3s ease;
+    margin-top: 16px;
+}
+
+.server-package-card button:hover {
+    background-color: var(--first-color);
+    box-shadow: 0 5px 15px rgba(255, 89, 44, 0.4);
+}
+
+.server-package-card button:active {
+    background-color: #e04415 !important;
+}
+
+.server-package-card-img {
+    position: relative;
+}
+
+.server-package-card-img img.server {
+    max-width: 100%;
+    z-index: 1;
+}
+
+.server-package-card-img img.server-bg {
+    max-width: 100%;
+    z-index: 0;
+}
+
+.server-package-card-img .cpanel {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.free-installation {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    top: 0;
+    right: 14px;
+    z-index: 10;
+    font-size: var(--small-font-size);
+    font-weight: var(--font-medium);
+    padding: 14px 14px;
+}
+
+/*==================== ADS SECTION ====================*/
+
+.ads .container {
+    max-width: 1440px;
+    margin-top: 130px;
+}
+
+.ads-title {
+    background-color: #FFF3ED;
+    border-radius: 50px;
+    margin: 0 auto;
+    width: fit-content;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.ads-title-badge {
+    padding: 10px 21.5px;
+    background-color: var(--first-color);
+    color: var(--text-color-hero);
+    font-size: var(--small-font-size);
+    font-weight: var(--font-semi-bold);
+    line-height: 150%;
+    margin-bottom: 0px;
+}
+
+.ads-title h3 {
+    color: var(--first-color);
+    font-weight: var(--font-medium);
+    font-size: var(--h3-font-size);
+    line-height: 150%;
+    margin-bottom: 0px;
+}
+
+.ads-title h3 span {
+    font-weight: var(--font-semi-bold);
+}
+
+.ads h1 {
+    font-weight: var(--font-semi-bold);
+    font-size: var(--h1-font-size);
+    color: var(--title-color);
+    margin-top: 35px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.ads p {
+    font-weight: var(--font-regular);
+    font-size: var(--h3-font-size);
+    color: var(--text-color);
+    margin-top: 16px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+/*==================== SERVICES SECTION ====================*/
+
+.services-section .container {
+    max-width: 1196px;
+    margin-top: 100px;
+}
+
+/* SEARCH SECTION */
+
+.search-section {
+    padding: 0px 59px 0px 59px;
+}
+
+.search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 8px solid #ECF0F6;
+    border-radius: 6px;
+    background-color: #ffffff;
+    padding-right: 20px;
+}
+
+.search-box input[type="text"] {
+    border: none;
+    padding: 20px 20px 20px 62px;
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+    color: var(--input-color);
+    width: 100%;
+    outline: none;
+}
+
+.search-button {
+    border: none;
+    background-color: var(--first-color);
+    color: var(--text-color-hero);
+    padding: 13px 10.5px;
+    border-radius: 6px;
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-semi-bold);
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    display: flex;
+    gap: 12px;
+}
+
+.search-button:hover {
+    background-color: var(--first-color);
+    box-shadow: 0 5px 15px rgba(255, 89, 44, 0.4);
+}
+
+.search-button:active {
+    background-color: #e04415 !important;
+}
+
+.search-button img {
+    filter: brightness(0) invert(1);
+}
+
+.search-button span {
+    color: var(--text-color-hero);
+}
+
+.search-inner {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 89, 44, 0.05);
+    border-radius: 6px;
+    justify-content: center;
+}
+
+.search-inner img {
+    padding: 9px;
+}
+
+/* SERVICES */
+
+.services-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    justify-content: center;
+}
+
+.services-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.services-item h4 {
+    font-weight: var(--font-regular);
+    font-size: var(--normal-font-size);
+    color: var(--text-color);
+    margin-bottom: 0px;
+}
+
+/* DOMAIN PRICING SECTION */
+
+.domain-pricing-section {
+    margin-top: 40px;
+}
+
+.pricing-cards-container {
+    max-width: 1196px;
+    display: flex;
+    border-radius: 16px;
+    gap: 16px;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.domain-pricing-section .popular-badge {
+    border: 1px solid var(--first-color);
+}
+
+.domain-pricing-section .badge {
+    font-size: var(--smaller-font-size);
+    font-weight: var(--font-regular);
+    padding: 6px 12px;
+}
+
+.pricing-card-content h4 {
+    margin-bottom: 0px;
+}
+
+/* SIDENAV MENU */
+.sidenav-navigation .accordion-button {
+    box-shadow: none !important;
+    padding: 15px 0;
+    font-weight: var(--font-medium);
+    color: var(--text-color-hero);
+    background-color: var(--hero-gradient-bottom) !important;
+}
+
+.accordion-item,
+.accordion .dropdown-item:focus {
+    background-color: var(--hero-gradient-bottom) !important;
+}
+
+
+.sidenav-navigation .accordion-button:not(.collapsed) {
+    background-color: transparent;
+    color: var(--first-color);
+}
+
+.sidenav-navigation .accordion-button::after {
+    filter: brightness(0) invert(1);
+}
+
+.sidenav-navigation .accordion-button:not(.collapsed)::after {
+    filter: invert(45%) sepia(78%) saturate(3191%) hue-rotate(346deg) brightness(100%) contrast(99%);
+}
+
+.offcanvas {
+    background: var(--hero-gradient-bottom);
+    color: var(--text-color-hero);
+}
+
+.btn-close {
+    filter: brightness(0) invert(1);
+}
+
+.sidenav-navigation .dropdown-item {
+    color: var(--text-color-hero);
+    transition: all 0.3s ease;
+    border-radius: 6px;
+}
+
+.sidenav-navigation .dropdown-item:hover,
+.sidenav-navigation .dropdown-item:focus {
+    color: var(--first-color);
+    background-color: transparent !important;
+    padding-left: 15px;
+}
+
+.sidenav-navigation .dropdown-item:active {
+    color: var(--first-color);
+}
+
+.sidenav-navigation .sidenav-link {
+    font-weight: var(--font-medium);
+    transition: all 0.3s ease;
+    padding: 15px 0px;
+}
+
+.sidenav-navigation .sidenav-link:hover {
+    color: var(--first-color);
+    padding-left: 15px;
+}
+
+.sidenav-navigation .sidenav-link:active {
+    color: var(--first-color);
+}
+
+.sidenav-actions span {
+    font-size: var(--small-font-size);
+    color: var(--text-color-light);
+}
+
+
+.sidenav-actions .form-select {
+    background-color: transparent;
+    color: var(--text-color-hero);
+    border-color: var(--nav-border-color);
+}
+
+.sidenav-actions .form-select option {
+    background-color: var(--hero-gradient-bottom);
+    color: var(--text-color-hero);
+}
+
+.offcanvas-body .action-buttons .dropdown-item {
+    color: black;
+}
+
+.offcanvas-body .action-buttons .dropdown-item:hover {
+    color: var(--first-color);
+}

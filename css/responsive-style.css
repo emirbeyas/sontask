@@ -1,0 +1,590 @@
+/* ==========  DESKTOP  ========== */
+@media (max-width: 1199.5px) {
+
+  /* Header - Navbar */
+  header .navigation {
+    gap: 10px;
+  }
+
+  header .logo {
+    gap: 5px;
+  }
+
+  header .action-buttons {
+    gap: 4px;
+  }
+
+  /* Hero */
+  .hero-content .container {
+    max-width: 992px;
+  }
+
+  .hero-text {
+    width: 550px;
+  }
+
+  .hero-text-title {
+    font-size: 38px;
+  }
+
+  /* Hero Pricing Cards */
+  .hero-pricing .container {
+    max-width: 992px;
+    gap: 12px;
+    padding: 16px !important;
+  }
+
+  .pricing-card {
+    padding: 12px;
+  }
+
+  /* Server Packages */
+  .server-packages .container {
+    max-width: 992px;
+  }
+
+  .server-package-card-text {
+    width: 100%;
+    padding: 26px 20px 26px 20px;
+  }
+
+  /* Domain Pricing */
+  .domain-pricing-section .pricing-cards-container {
+    max-width: 992px;
+    gap: 12px;
+  }
+
+  .domain-pricing-section .pricing-card {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 1100px) {
+
+  /* Header - Navbar */
+  header .navigation {
+    gap: 5px;
+  }
+
+  header .logo {
+    gap: 2px;
+  }
+
+  header .action-buttons {
+    gap: 2px;
+  }
+
+  /* Hero İçerik Alanı */
+  .hero-text {
+    width: 480px;
+  }
+
+  .server-person-img {
+    max-width: 90%;
+  }
+
+  .hero-content .bg-logo {
+    width: 500px;
+    height: auto;
+    left: -80px;
+  }
+
+  /* Server Packages */
+  .server-package-card-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .server-package-card-img img.server,
+  .server-package-card-img img.server-bg {
+    max-width: 90%;
+  }
+}
+
+/* ==========  TABLET  ========== */
+@media (max-width: 991px) {
+
+  /* Header - Navbar */
+  header .logo {
+    gap: 10px;
+  }
+
+  header .action-buttons {
+    gap: 8px;
+  }
+
+  /* Hero */
+  .hero-top-bg {
+    height: auto;
+    padding-bottom: 40px;
+  }
+
+  .hero-content .container {
+    max-width: 720px;
+  }
+
+  .hero-text {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .hero-text-subtitle-container {
+    justify-content: center;
+  }
+
+  .position-relative {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .server-person-img {
+    max-width: 80%;
+    height: auto;
+  }
+
+  /* Hero Pricing */
+  .hero-pricing {
+    height: 240px;
+  }
+
+  .hero-pricing .container {
+    max-width: 720px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .pricing-card {
+    width: 48%;
+    margin-bottom: 8px;
+  }
+
+
+
+  .discounted-pricing-card .pricing-card {
+    width: 100%;
+  }
+
+  .discounted-pricing-card-container .discounted-pricing-card:nth-child(1) {
+    top: 30%;
+    left: 40%;
+    transform: translate(-100%, -50%);
+  }
+
+  .discounted-pricing-card-container .discounted-pricing-card:nth-child(2) {
+    top: 60%;
+    left: 40%;
+    transform: translate(-20%, -50%);
+  }
+
+
+
+
+  /* Server Packages */
+  .server-packages .container {
+    max-width: 720px;
+  }
+
+  .server-package-card {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .server-package-card-text {
+    padding: 20px 15px;
+  }
+
+  .server-package-card-img img.server-bg {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .server-package-card-img img.cpanel {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Search & Services */
+  .search-section {
+    padding: 0px 20px;
+  }
+
+  .services-wrapper {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  /* Domain Pricing */
+  .domain-pricing-section .pricing-cards-container {
+    max-width: 720px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .domain-pricing-section .pricing-card {
+    width: calc(33.33% - 16px);
+    margin-bottom: 8px;
+  }
+}
+
+/* ==========  MOBILE  ========== */
+@media (max-width: 767.5px) {
+
+  /* Hero */
+  .hero-content .container {
+    max-width: 540px;
+  }
+
+  .hero-text-title {
+    font-size: 32px;
+  }
+
+  .hero-text-description {
+    font-size: 14px;
+  }
+
+  .server-person-img {
+    max-width: 90%;
+  }
+
+  .hero-content .bg-logo {
+    width: 400px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Hero Pricing */
+  .hero-pricing {
+    background-color: transparent;
+  }
+
+  .hero-pricing .container {
+    position: absolute !important;
+    top: -250px !important;
+    transform: translateX(-50%) !important;
+    flex-direction: column;
+    max-width: 90%;
+    padding: 15px !important;
+  }
+
+  .pricing-card {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .pricing-card-content h4 {
+    font-size: 15px;
+  }
+
+  /* Server Packages */
+  .server-packages .container {
+    margin-top: 270px;
+  }
+
+  .server-package-card {
+    grid-template-columns: 1fr;
+  }
+
+  .server-package-card-text {
+    width: 100%;
+    text-align: center;
+    padding: 24px 20px 15px 20px;
+  }
+
+  .server-package-card-img {
+    order: -1;
+    padding: 20px;
+    height: 180px;
+    overflow: hidden;
+  }
+
+  .server-package-card-img img.server {
+    position: absolute !important;
+  }
+
+  .server-package-card-img img.cpanel {
+    position: absolute;
+    max-width: 90%;
+    bottom: -10%;
+    right: 5%;
+  }
+
+  .server-package-card button {
+    margin: 15px auto 0;
+    display: block;
+  }
+
+  /* Search & Services */
+  .search-section {
+    padding: 0px;
+  }
+
+  .search-box {
+    flex-direction: column;
+    border: none;
+    background-color: transparent;
+    padding-right: 0;
+    position: relative;
+  }
+
+  .search-box .form-control {
+    border: 8px solid #ECF0F6;
+    border-radius: 6px;
+    margin-bottom: 15px;
+  }
+
+  .search-inner {
+    top: 31px;
+
+  }
+
+  .search-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .services-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  /* Domain Pricing */
+  .domain-pricing-section .pricing-cards-container {
+    max-width: 90%;
+    flex-direction: column;
+    padding: 15px !important;
+  }
+
+  .domain-pricing-section .pricing-card {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .domain-pricing-section .pricing-card-content h4 {
+    font-size: 15px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+}
+
+/* ==========  SMALL MOBILE  ========== */
+@media (max-width: 576px) {
+
+  /* Hero */
+  .hero-content .container {
+    max-width: 100%;
+    padding: 0 15px !important;
+  }
+
+  .hero-text-title {
+    font-size: 28px;
+  }
+
+  .server-person-img {
+    max-width: 100%;
+  }
+
+  .hero-content .bg-logo {
+    width: 320px;
+  }
+
+  /* Hero Pricing */
+  .hero-pricing {
+    background-color: transparent;
+  }
+
+  .hero-pricing .container {
+    top: -250px !important;
+    padding: 12px !important;
+    gap: 10px;
+    max-width: 95%;
+  }
+
+  .pricing-card {
+    padding: 10px;
+  }
+
+  .pricing-card-content p {
+    font-size: 12px;
+  }
+
+  .price-old,
+  .price-new span {
+    font-size: 12px;
+  }
+
+  .price-new {
+    font-size: 16px;
+  }
+
+  /* Server Packages */
+  .server-packages .container {
+    margin-top: 200px;
+  }
+
+  .server-package-card-text h4 {
+    font-size: 15px;
+  }
+
+  .server-package-card-text p {
+    font-size: 11px;
+  }
+
+  .server-package-card-img {
+    height: 150px;
+  }
+
+  .server-package-card-img img.server {
+    max-width: 120%;
+    top: -20%;
+  }
+
+  /* Search & Services */
+  .search-inner {
+    top: 26px;
+    left: 8px;
+  }
+
+  .search-box input[type="text"] {
+    padding: 15px 15px 15px 55px;
+    font-size: 14px;
+  }
+
+  .services-item h4 {
+    font-size: 14px;
+  }
+
+  /* Domain Pricing */
+  .domain-pricing-section .pricing-cards-container {
+    gap: 10px;
+    max-width: 95%;
+    padding: 12px !important;
+  }
+
+  .domain-pricing-section .pricing-card {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .domain-pricing-section .pricing-card-content p {
+    font-size: 12px;
+  }
+
+  .domain-pricing-section .price-old,
+  .domain-pricing-section .price-new span {
+    font-size: 12px;
+  }
+
+  .domain-pricing-section .price-new {
+    font-size: 16px;
+  }
+}
+
+/* ==========  SMALL MOBILE  ========== */
+@media (max-width: 360px) {
+
+  /* Hero */
+  .hero-text-title {
+    font-size: 24px;
+  }
+
+  .hero-text-description {
+    font-size: 13px;
+  }
+
+  /* Hero Pricing */
+  .hero-pricing {
+    background-color: transparent;
+  }
+
+  .hero-pricing .container {
+    top: -250px !important;
+  }
+
+  .pricing-card {
+    padding: 8px;
+  }
+
+  .pricing-card hr {
+    margin: 8px 0;
+  }
+
+  .discounted-pricing-card-container .discounted-pricing-card:nth-child(2) {
+    top: 50%;
+    left: 40%;
+    transform: translate(-20%, -50%);
+  }
+
+  /* Server Packages */
+  .server-packages .container {
+    margin-top: 120px;
+  }
+
+  .server-package-card {
+    padding: 0;
+  }
+
+  .server-package-card-text {
+    padding: 15px;
+  }
+
+  .server-package-card-img {
+    height: 120px;
+  }
+
+  .server-package-card-img img.server {
+    rotate: -20deg;
+  }
+
+  /* Search & Services */
+  .search-box .form-control {
+    padding: 12px 12px 12px 50px;
+    font-size: 13px;
+  }
+
+  .search-button {
+    padding: 10px;
+  }
+
+  .search-button span {
+    font-size: 13px;
+  }
+
+  .search-inner {
+    width: 35px;
+    height: 35px;
+    left: 12px;
+    top: 26px;
+  }
+
+  .services-item h4 {
+    font-size: 12px;
+  }
+
+  /* Domain Pricing */
+  .domain-pricing-section .pricing-cards-container {
+    padding: 8px !important;
+  }
+
+  .domain-pricing-section .pricing-card {
+    padding: 8px;
+  }
+
+  .domain-pricing-section .pricing-card hr {
+    margin: 8px 0;
+  }
+
+  .section-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+}
